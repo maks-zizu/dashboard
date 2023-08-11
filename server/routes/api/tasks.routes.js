@@ -3,16 +3,7 @@ const { Task, User, Project } = require('../../db/models');
 
 router.get('/', async (req, res) => {
   try {
-    const tasks = await Task.findAll({
-      // include: [
-      //   {
-      //     model: User,
-      //   },
-      //   {
-      //     model: Project,
-      //   },
-      // ],
-    });
+    const tasks = await Task.findAll({ include: { model: User } });
     console.log(tasks);
     res.json(tasks);
   } catch ({ message }) {
