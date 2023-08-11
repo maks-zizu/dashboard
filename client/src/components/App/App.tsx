@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import ProjectCard from '../features/projects/ProjectCard';
+import ProjectCard from '../features/projects/ProjectPage';
 
 function App(): JSX.Element {
   return (
