@@ -4,8 +4,8 @@ import * as api from './api';
 
 export const initialState: TasksState = { tasks: [], error: '' };
 
-export const tasksInit = createAsyncThunk('tasks/init', () =>
-  api.initTasksFetch()
+export const tasksInit = createAsyncThunk('tasks/init', (projectId:string) =>
+  api.initTasksFetch(projectId)
 );
 
 const tasksSlice = createSlice({
