@@ -16,13 +16,13 @@ module.exports = (sequelize, DataTypes) => {
       help_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        references: { model: 'Help', key: 'id' },
+        references: { model: 'Helps', key: 'id' },
         onDelete: 'CASCADE',
       },
       user_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        references: { model: 'User', key: 'id' },
+        references: { model: 'Users', key: 'id' },
         onDelete: 'CASCADE',
       },
     },

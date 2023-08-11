@@ -12,13 +12,13 @@ module.exports = (sequelize, DataTypes) => {
       project_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        references: { model: 'Project', key: 'id' },
+        references: { model: 'Projects', key: 'id' },
         onDelete: 'CASCADE',
       },
       user_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        references: { model: 'User', key: 'id' },
+        references: { model: 'Users', key: 'id' },
         onDelete: 'CASCADE',
       },
     },

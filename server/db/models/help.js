@@ -18,13 +18,13 @@ module.exports = (sequelize, DataTypes) => {
       user_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        references: { model: 'User', key: 'id' },
+        references: { model: 'Users', key: 'id' },
         onDelete: 'CASCADE',
       },
       task_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        references: { model: 'Task', key: 'id' },
+        references: { model: 'Tasks', key: 'id' },
         onDelete: 'CASCADE',
       },
     },
