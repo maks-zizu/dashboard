@@ -21,7 +21,7 @@ export type Help = {
   taskId: number;
 };
 
-export type State = {
+export type TasksState = {
   tasks: Task[];
   error: string | undefined;
 };
