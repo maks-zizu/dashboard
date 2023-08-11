@@ -2,7 +2,7 @@
 import { Task } from './type';
 
 export const initTasksFetch = async (): Promise<Task[]> => {
-  const res = await fetch('/api/tasks');
+  const res = await fetch('/api/task');
   const data = res.json();
   return data;
 };
