@@ -8,8 +8,6 @@ import TaskCard from './TaskCard';
 function TasksList(): JSX.Element {
   const dispatch = useAppDispatch();
   const tasks = useSelector((store: RootState) => store.tasks.tasks);
-  console.log(tasks);
-  
   useEffect(() => {
     dispatch(tasksInit());
   }, [dispatch]);

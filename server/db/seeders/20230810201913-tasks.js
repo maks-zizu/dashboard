@@ -29,7 +29,7 @@ module.exports = {
         {
           title: 'nan',
           description: 'kek',
-          status: '0',
+          status: '1',
           deadline: 10,
           user_id: 1,
           project_id: 2,
@@ -39,7 +39,7 @@ module.exports = {
         {
           title: 'nan',
           description: 'kek',
-          status: '0',
+          status: '2',
           deadline: 10,
           user_id: 3,
           project_id: 2,
