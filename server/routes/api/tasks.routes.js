@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 router.get('/:projectId', async (req, res) => {
   try {
     const tasks = await Task.findAll({
-      where: { id: req.params.projectId },
+      where: { project_id: req.params.projectId },
       include: {
         model: Project,
         include: { model: UserProject, include: { model: User } },

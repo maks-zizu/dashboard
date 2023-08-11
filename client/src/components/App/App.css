@@ -36,17 +36,3 @@
     transform: rotate(360deg);
   }
 }
-.tasks_0 {
-  background-color: #61dafb;
-}
-.tasks_1 {
-  background-color: #7061fb;
-}
-.tasks_2 {
-  background-color: #61fb6e;
-}
-.projectsList {
-  display: flex;
-  position: relative;
-  justify-content: space-between;
-}

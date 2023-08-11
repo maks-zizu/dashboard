@@ -2,14 +2,14 @@ import React, { useEffect } from 'react';
 
 import { useSelector } from 'react-redux';
 import { RootState, useAppDispatch } from '../../../store/store';
-import { tasksInit } from './tasksSlice';
+// import { tasksInit } from './tasksSlice';
 import TaskCard from './TaskCard';
 
 function TasksList(): JSX.Element {
   const dispatch = useAppDispatch();
   const tasks = useSelector((store: RootState) => store.tasks.tasks);
   useEffect(() => {
-    dispatch(tasksInit());
+    // dispatch(tasksInit());
   }, [dispatch]);
   return (
     <div>

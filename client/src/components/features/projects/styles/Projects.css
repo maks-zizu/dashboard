@@ -1,0 +1,69 @@
+.boardsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  background-color: #ec9932;
+  justify-content: center;
+  gap: 20px;
+  grid-auto-flow: dense;
+  min-height: 80vh;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.tasks_title h1 {
+  margin-block-start: 0.3em;
+  margin-block-end: 0.3em;
+  font-size: 1.6em;
+}
+
+.tasks_0 {
+  background-color: #0e86a7;
+}
+.tasks_1 {
+  background-color: #4c41b1;
+}
+.tasks_2 {
+  background-color: #13a520;
+}
+
+.TaskCard {
+  background-color: #ce661b;
+  margin: 5px;
+}
+
+.projectList_container {
+  box-sizing: border-box;
+  background-color: #ae498e;
+  margin: 30px auto;
+  max-width: 60vw;
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+.projectsList {
+  display: flex;
+  padding: 30px 50px;
+  justify-content:space-around;
+}
+
+.projectCard {
+  display: flex;
+  padding: 5px;
+  min-height: 150px;
+  min-width: 250px;
+  background-color: #313695;
+  margin: 5px;
+  color: azure;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.projectCard_link {
+  text-decoration: none;
+}

@@ -11,7 +11,7 @@ function App(): JSX.Element {
       <h1>Здесь будет самое лучшее приложение-планировщик</h1>
       <Routes>
         <Route path="/" element={<ProjectsList />} />
-        <Route path="/:projectId" element={<ProjectPage />} />
+        <Route path="/api/tasks/:projectId" element={<ProjectPage />} />
       </Routes>
     </>
   );
