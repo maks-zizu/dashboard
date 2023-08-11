@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
 
-function App() {
+function App(): JSX.Element {
   return (
-    <div className="App">
-      Привет
-    </div>
+    <>
+      <div className="App" />
+      <h1>Здесь будет самое лучшее приложение-планировщик</h1>
+    </>
   );
 }
 
