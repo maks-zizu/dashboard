@@ -13,6 +13,12 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
+          name_project: 'first',
+          admin_id: 1,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
           name_project: 'second',
           admin_id: 2,
           createdAt: new Date(),
