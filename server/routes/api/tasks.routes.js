@@ -1,23 +1,25 @@
 const router = require('express').Router();
-const { Task, User, Project } = require('../../db/models');
+const { Task, User, Project, UserProject } = require('../../db/models');
 
 router.get('/', async (req, res) => {
   try {
-    const tasks = await Task.findAll({ include: { model: User } });
-    console.log(tasks);
-    res.json(tasks);
+    const projects = await Project.findAll({ where: { admin_id: 1 } });
+    res.json(projects);
   } catch ({ message }) {
     res.json({ message });
   }
 });
 
-router.get('/:taskId', async (req, res) => {
+router.get('/:projectId', async (req, res) => {
   try {
-    const task = await Task.findOne({
-      raw: true,
-      where: { id: req.params.taskId },
+    const tasks = await Task.findAll({
+      where: { id: req.params.projectId },
+      include: {
+        model: Project,
+        include: { model: UserProject, include: { model: User } },
+      },
     });
-    res.json(task);
+    res.json(tasks);
   } catch ({ message }) {
     res.json({ message });
   }
@@ -62,7 +64,7 @@ router.put('/:taskId', async (req, res) => {
         description,
         deadline,
       },
-      { where: { id: taskId } },
+      { where: { id: taskId } }
     );
     res.json(task);
   } catch ({ message }) {
