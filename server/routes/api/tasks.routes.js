@@ -4,6 +4,7 @@ const { Task, User, Project, UserProject } = require('../../db/models');
 router.get('/', async (req, res) => {
   try {
     const projects = await Project.findAll({ where: { admin_id: 1 } });
+    console.log(projects);
     res.json(projects);
   } catch ({ message }) {
     res.json({ message });

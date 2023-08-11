@@ -1,7 +1,7 @@
 export type Project = {
   id: number;
-  name: string;
-  adminId: number;
+  name_project: string;
+  admin_id: number;
 };
 
 export type ProjectsState = {
