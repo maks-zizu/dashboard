@@ -1,8 +1,8 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { State } from './type';
+import { TasksState } from './type';
 import * as api from './api';
 
-export const initialState: State = { tasks: [], error: '' };
+export const initialState: TasksState = { tasks: [], error: '' };
 
 export const tasksInit = createAsyncThunk('tasks/init', () =>
   api.initTasksFetch()
