@@ -1,12 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 
-const TasksList = ():JSX.Element => {
+import { useSelector } from 'react-redux';
+import { RootState, useAppDispatch } from '../../../store/store';
+import { tasksInit } from './tasksSlice';
+import TaskCard from './TaskCard';
+
+function TasksList(): JSX.Element {
+  const dispatch = useAppDispatch();
+  const tasks = useSelector((store: RootState) => store.tasks.tasks);
+  console.log(tasks);
   
+  useEffect(() => {
+    dispatch(tasksInit());
+  }, [dispatch]);
   return (
     <div>
-
+      {tasks.map((task) => (
+        <TaskCard task={task} key={task.id} />
+      ))}
     </div>
-  )
+  );
 }
 
-export default TasksList
+export default TasksList;
