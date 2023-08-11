@@ -20,3 +20,8 @@ export type Help = {
   userId: number;
   taskId: number;
 };
+
+export type State = {
+  tasks: Task[];
+  error: string | undefined;
+};
