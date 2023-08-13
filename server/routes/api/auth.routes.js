@@ -11,7 +11,7 @@ router.post('/reg', async (req, res) => {
     if (name && password && email) {
       let user = await User.findOne({ where: { name } });
       if (!user) {
-        const hash = await bcrypt.hash(password, 10);
+        const hash = await bcrypt.hash(password, 5);
         user = await User.create({ name, password: hash, email });
         req.session.userId = user.id;
         res.locals.user = { name: user.name, id: user.id };
@@ -33,7 +33,6 @@ router.get('/logout', (req, res) => {
     if (error) {
       return res.status(500).json({ message: 'Ошибка при удалении сессии' });
     }
-
     res
       .clearCookie('user_sid') // серверное удаление куки по имени
       .json({ message: 'Успешный выход' });
